@@ -1,14 +1,11 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+import random
 
 def punto_dentro_del_rectangulo(coordenadas_rectangulo, punto):
     x1, y1, x2, y2 = coordenadas_rectangulo
     x, y = punto
-    print("1" + str(x1))
-    print("2" + str(y1))
-    print("3" + str(x2))
-    print("4" + str(y2))
-    if x1 <= x <= x2 and y1 <= y <= y2:
+    if x2 <= x <= x1 and y2 <= y <= y1:
         return True
     else:
         return False
@@ -17,7 +14,7 @@ def punto_dentro_del_rectangulo(coordenadas_rectangulo, punto):
 coordenadas_rectangulo = (0.557083, 0.551111, 0.0291667, 0.0266667)
 
 # Punto aleatorio
-punto_aleatorio = (0.3, 0.3)
+punto_aleatorio = (random.uniform(0, 1), random.uniform(0, 1))
 
 # Verificar si el punto está dentro del rectángulo
 resultado = punto_dentro_del_rectangulo(coordenadas_rectangulo, punto_aleatorio)
