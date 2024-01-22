@@ -10,7 +10,7 @@ for i in tqdm(range(499, 1120), desc="Procesando imagen"):
     script_path = "detect.py"
     img_path = "camera_rgb/" + nombre_img
 
-    comando = ["python", script_path, "--weights", "yolov5s.pt", "--source", img_path, "--save-txt"]
+    comando = ["python3", script_path, "--weights", "yolov5s.pt", "--source", img_path, "--save-txt"]
     
     try:
         proceso = subprocess.run(comando, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
